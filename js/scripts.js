@@ -53,7 +53,6 @@ $(document).ready(function() {
     $(".output").append("<li>Your Movie: " + ticket.movie.movieTitle + "</li>");
     $(".output").append("<li>Your Show Time: " + ticket.movieTime+ " hours</li>");
     $(".output").append("<li>Your Ticket Price: $" + ticket.getPrice() + "</li>");
-
   });
 
 });
