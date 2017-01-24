@@ -21,6 +21,7 @@ Ticket.prototype.getPrice = function() {
   }else if(this.age === "child") {
     price = price *.8;
   }
+  price= price.toFixed(2);
   return price;
 };
 
@@ -48,7 +49,10 @@ $(document).ready(function() {
     var ticket = new Ticket (chooseMovie,chooseTime,chooseAge);
     console.log(ticket);
     console.log(ticket.getPrice());
-
+    $(".output").empty();
+    $(".output").append("<li>Your Movie: " + ticket.movie.movieTitle + "</li>");
+    $(".output").append("<li>Your Show Time: " + ticket.movieTime+ " hours</li>");
+    $(".output").append("<li>Your Ticket Price: $" + ticket.getPrice() + "</li>");
 
   });
 
